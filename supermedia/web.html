@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>streetwise Supermedia WEBSEITEN</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <style>
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 255, 255, 0.2);
+        }
+        .intro-gif { width: 100%; height: 100%; object-fit: cover; }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-content" style="text-align: center; z-index: 1;">
+            <div class="hero-text" style="animation: fadeInUp 1s ease-out forwards;">
+                <span style="display: block; margin-bottom: 1rem;">Eine professionelle Website kostet zwischen</span>
+                <span style="display: block; margin-bottom: 1rem;">CHF 5'000 und CHF 15'000.</span>
+                <span style="display: block; margin-top: 2rem;">Das sagen sie dir.</span>
+                <span style="display: block; margin-top: 2rem;">Ich sage dir <span style="color: var(--accent-cyan); font-weight: 600;">was anderes</span>.</span>
+            </div>
+            <a href="#reveal" class="cta-button" style="animation: fadeInUp 1s ease-out 0.5s forwards;">Zeig mir</a>
+        </div>
+    </section>
+
+    <script>
+        // Globaler Scroll-Observer für Animationen
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.add('fade-in-up'); // Fügt die Animationsklasse hinzu
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

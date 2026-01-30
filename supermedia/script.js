@@ -5,34 +5,29 @@
 // IMPORTANT: Replace this URL with your Google Apps Script Web App URL
 const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
 
-// VIMEO VIDEO LOGIC - Sicher eingebettet
+// VIMEO VIDEO LOGIC - Hybrid Lösung (Background Loop + Click to Play)
 document.addEventListener('DOMContentLoaded', function() {
     const videoWrappers = document.querySelectorAll('.video-wrapper');
     
     videoWrappers.forEach(wrapper => {
-        const iframe = wrapper.querySelector('iframe');
-        const overlay = wrapper.querySelector('.video-overlay');
-        
-        // Prüfung, ob alle Elemente existieren, bevor wir fortfahren
-        if (iframe && overlay && typeof Vimeo !== 'undefined') {
-            const player = new Vimeo.Player(iframe);
+        wrapper.addEventListener('click', function() {
+            const iframe = this.querySelector('iframe');
+            const overlay = this.querySelector('.video-overlay');
+            const vimeoId = this.getAttribute('data-vimeo-id');
 
-            wrapper.addEventListener('click', function() {
-                // Falls data-src genutzt wird (Lazy Loading)
-                if (iframe.getAttribute('data-src')) {
-                    iframe.src = iframe.getAttribute('data-src');
-                    iframe.removeAttribute('data-src');
-                }
+            // Nur ausführen, wenn Iframe und ID vorhanden sind
+            if (iframe && vimeoId) {
+                // Tauscht den Background-Loop gegen das Video mit Ton & Controls aus
+                const newSrc = `https://player.vimeo.com/video/${vimeoId}?api=1&autoplay=1&muted=0&controls=1`;
+                iframe.src = newSrc;
 
-                player.play().then(function() {
-                    // Die zwei Zeilen, jetzt sicher innerhalb des Klick-Events:
+                // Overlay sanft ausblenden
+                if (overlay) {
                     overlay.style.opacity = '0';
                     overlay.style.pointerEvents = 'none';
-                }).catch(function(error) {
-                    console.error("Vimeo Play Error:", error);
-                });
-            });
-        }
+                }
+            }
+        });
     });
 });
 

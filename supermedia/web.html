@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>streetwise Supermedia WEBSEITEN</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>WEBSEITE & Support ab CHF 69/Monat | streetwise Supermedia</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    
+    <!-- Hero Section -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
@@ -16,10 +18,11 @@
                 <span style="margin-top: 2rem;">Das sagen sie dir.</span>
                 <span style="margin-top: 2rem;">Ich sage dir <span class="highlight">was anderes</span>.</span>
             </div>
-            <a href="#reveal" class="cta-button">Zeig mir</a>
+            <button class="cta-button" onclick="openModal()">Zeig mir</button>
         </div>
     </section>
 
+    <!-- Reveal Section -->
     <section id="reveal" class="section">
         <div class="reveal-section">
             <div class="video-container">
@@ -32,8 +35,9 @@
             <div class="reveal-text">
                 <p><strong>Hi. Ich bin Mat.</strong></p>
                 <p>Kein Webdesigner. Kein Marketing-Guru.</p>
-                <p>Ich bin jemand, der glaubt, dass Menschen wie du einen besseren Online-Auftritt <span class="highlight">verdient haben</span>.</p>
-                <p>Ohne Mondpreise dafür zu bezahlen.<br>
+                <p>Ich bin jemand, dem digital Media einfach Spass macht</p>
+                <p>- und der glaubt, dass Menschen wie du einen modernen Online-Auftritt <span class="highlight">verdient haben</span>.</p>
+                <p>Auch ohne Mondpreise dafür zu bezahlen.<br>
                 Ohne allein gelassen zu werden.<br>
                 Ohne dass deine Website nach 2 Jahren schon wieder veraltet ist.</p>
                 <p style="margin-top: 2rem; font-size: 1.4rem; color: #00ffff;">
@@ -43,6 +47,7 @@
         </div>
     </section>
 
+    <!-- Packages Section -->
     <section class="section">
         <h2 class="section-title">Deine Website. Deine Wahl. Dein Tempo.</h2>
         <div class="packages-grid">
@@ -66,7 +71,7 @@
                 </div>
                 <p class="package-ideal">Perfekt für: Deinen Start ins Online-Business</p>
                 <p class="package-ideal">Mit deiner privaten Email (GMX/Gmail)</p>
-                <a href="#kontakt" class="package-cta">Starten</a>
+                <button class="package-cta" onclick="openModal()">Starten</button>
                 <p class="package-note">Jederzeit kündbar*</p>
             </div>
 
@@ -92,7 +97,7 @@
                     <div class="package-setup-note">GESCHENKT bei 12 Monaten!</div>
                 </div>
                 <p class="package-ideal">Perfekt für: Mehr Professionalität & volle Flexibilität</p>
-                <a href="#kontakt" class="package-cta">Das will ich</a>
+                <button class="package-cta" onclick="openModal()">Das will ich</button>
                 <p class="package-note">Jederzeit kündbar*</p>
             </div>
 
@@ -119,7 +124,7 @@
                     <div class="package-setup-note">GESCHENKT bei 12 Monaten!</div>
                 </div>
                 <p class="package-ideal">Perfekt für: Maximale Sichtbarkeit & direkt Kunden gewinnen</p>
-                <a href="#kontakt" class="package-cta">Let's go</a>
+                <button class="package-cta" onclick="openModal()">Let's go</button>
                 <p class="package-note">Jederzeit kündbar*</p>
             </div>
 
@@ -129,6 +134,7 @@
         </p>
     </section>
 
+    <!-- Comparison Section -->
     <section class="section">
         <h2 class="section-title">Warum ein Abo statt einmalig bezahlen?</h2>
         <div class="comparison-table">
@@ -206,71 +212,76 @@
     </section>
 
     <section class="section">
-  <h2 class="section-title">Was andere sagen</h2>
+        <h2 class="section-title">Was andere sagen</h2>
 
-  <div class="testimonials-grid">
+        <div class="testimonials-grid">
 
-    <!-- Testimonial -->
-    <div class="testimonial-card">
-      <div class="video-wrapper" data-vimeo-id="553655585">
-        <div class="video-overlay">
-          <div class="play-button"></div>
+    <!-- Testimonials Section -->
+    <section class="section">
+        <h2 class="section-title">Was andere sagen</h2>
+        <div class="testimonials-grid">
+            
+            <div class="testimonial-card">
+
+                <div class="video-wrapper" data-vimeo-id="553655585">
+                    <div class="video-overlay">
+                    <div class="play-button"></div>
+                    </div>
+                    <iframe
+                        data-src="https://player.vimeo.com/video/553655585?api=1&background=0&muted=1"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="testimonial-quote">"Mein Ziel war 10 Anfragen, erreicht haben wir 40 Anfragen davon wurden 20 Termine gebucht. Das übertrifft meine Erwartungen..."</p>
+                <p class="testimonial-author">Stephanie Amira</p>
+                <p class="testimonial-role">Lovecore Bodywork, Basel.</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="video-wrapper" data-vimeo-id="699096313">
+                    <div class="video-overlay">
+                    <div class="play-button"></div>
+                    </div>
+                    <iframe
+                        data-src="https://player.vimeo.com/video/699096313?api=1&background=0&muted=1"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="testimonial-quote">"CHF 20'000 Mehr Umsatz nach 4 Wochen streetwise Video Ads Kampagne... Und Support inklusive? Das war ein No-Brainer."</p>
+                <p class="testimonial-author">Bene</p>
+                <p class="testimonial-role">Powerboat Academy Bootsfahrschule, Basel</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="video-wrapper" data-vimeo-id="536276480">
+                    <div class="video-overlay">
+                    <div class="play-button"></div>
+                    </div>
+                    <iframe
+                        data-src="https://player.vimeo.com/video/536276480?api=1&background=0&muted=1"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="testimonial-quote">"Es ist unglaublich: 30 ANFRAGEN in nur einer WOCHE — das ist das beste was mir in den letzten Jahren in Sachen Marketing passiert ist!"</p>
+                <p class="testimonial-author">Benno</p>
+                <p class="testimonial-role">Flussbus AG, Klein-Passagierschiff, Basel</p>
+            </div>
+
         </div>
-        <iframe
-          data-src="https://player.vimeo.com/video/553655585?api=1&background=0&muted=1"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <p class="testimonial-quote">"Mein Ziel war 10 Anfragen, erreicht haben wir 40 Anfragen davon wurden 20 Termine gebucht. Das übertrifft meine Erwartungen..."</p>
-      <p class="testimonial-author">Stephanie Amira</p>
-      <p class="testimonial-role">Lovecore Bodywork, Basel.</p>
-    </div>
-
-    <div class="testimonial-card">
-      <div class="video-wrapper" data-vimeo-id="699096313">
-        <div class="video-overlay">
-          <div class="play-button"></div>
-        </div>
-        <iframe
-          data-src="https://player.vimeo.com/video/699096313?api=1&background=0&muted=1"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <p class="testimonial-quote">"CHF 20'000 Mehr Umsatz nach 4 Wochen streetwise Video Ads Kampagne... Und Support inklusive? Das war ein No-Brainer."</p>
-      <p class="testimonial-author">Bene</p>
-      <p class="testimonial-role">Powerboat Academy Bootsfahrschule, Basel</p>
-    </div>
-
-    <div class="testimonial-card">
-      <div class="video-wrapper" data-vimeo-id="536276480">
-        <div class="video-overlay">
-          <div class="play-button"></div>
-        </div>
-        <iframe
-          data-src="https://player.vimeo.com/video/536276480?api=1&background=0&muted=1"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <p class="testimonial-quote">"Es ist unglaublich: 30 ANFRAGEN in nur einer WOCHE — das ist das beste was mir in den letzten Jahren in Sachen Marketing passiert ist!"</p>
-      <p class="testimonial-author">Benno</p>
-      <p class="testimonial-role">Flussbus AG, Klein-Passagierschiff, Basel</p>
-    </div>
-
-  </div>
-</section>
+    </section>
 
       
-
+    <!-- Extras Section -->
     <section class="section">
         <h2 class="section-title">Und das gibt's dazu</h2>
         <div class="extras-grid">
-            
+        
             <div class="extra-card">
                 <div class="extra-icon">🎓</div>
                 <h3 class="extra-title">Self-Promotion Kurse</h3>
@@ -298,17 +309,18 @@
         </div>
     </section>
 
+        <!-- Final CTA Section -->
     <section id="kontakt" class="final-cta">
         <img src="https://d1yei2z3i6k35z.cloudfront.net/2913691/66c7cdf5839be_Mat1.gif" alt="Mat" class="final-image">
         <div class="final-text">
             <p><strong>Bist du bereit?</strong></p>
             <p>Bereit für einen Web Auftritt, der mit dir wächst?</p>
             <p>Bereit für Support, der nicht extra kostet?</p>
-            <p>Bereit für einen Partner der dich weiterbringt?</p>
-            <p>— anstatt dir nur einen Service zu verkaufen?</p>
+            <p>Bereit für einen echten Partner der dich wirklich weiterbringt?</p>
+            <p>— und das zu einem unschlagbaren Preis?</p>
         </div>
         <div class="final-buttons">
-            <a href="#" class="cta-button" id="openPopup">Ja, lass uns reden</a>
+            <button class="cta-button" onclick="openModal()">Ja, lass uns reden</button>
             <p style="color: #999; margin-top: 1rem;">Oder schreib mir einfach:</p>
             <a href="mailto:mat@streetwise.studio" class="email-link">mat@streetwise.studio</a>
             <p style="color: #999; font-size: 0.95rem;">Ich antworte persönlich.</p>
@@ -316,132 +328,69 @@
         <p class="disclaimer">Kein kostenloses Erstgespräch – kein Pitch, einfach nur ganz normal telefonieren und schauen ob es passt...</p>
     </section>
 
+    <!-- Modal Popup -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2 class="modal-title">Lass uns starten! 🚀</h2>
+            <p class="modal-subtitle">Ich melde mich innerhalb von 24 Stunden bei dir</p>
+        
+            <form id="registrationForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label class="form-label" for="firstName">Vorname *</label>
+                    <input 
+                        type="text" 
+                        id="firstName" 
+                        name="firstName" 
+                        class="form-input" 
+                        placeholder="Dein Vorname"
+                        required
+                    >
+                </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
+                <div class="form-group">
+                    <label class="form-label" for="email">Email *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input" 
+                        placeholder="deine@email.ch"
+                        required
+                    >
+                </div>
 
-            document.querySelectorAll('.section').forEach(section => {
-                observer.observe(section);
-            });
+                <div class="form-group">
+                    <label class="form-label" for="phone">
+                        Telefonnummer <span class="optional">(optional)</span>
+                    </label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        class="form-input" 
+                        placeholder="+41 79 123 45 67"
+                    >
+                </div>
 
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+                <button type="submit" class="form-submit" id="submitBtn">
+                    Jetzt anfragen
+                </button>
 
-    <script src="https://player.vimeo.com/api/player.js"></script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const wrappers = document.querySelectorAll('.video-wrapper');
-
-        // Lazy Load
-        const loadObserver = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const wrapper = entry.target;
-                    const iframe = wrapper.querySelector('iframe');
-
-                    if (!iframe.src) {
-                        iframe.src = iframe.dataset.src;
-                        wrapper.classList.add('loaded');
-                    }
-
-                    loadObserver.unobserve(wrapper);
-                }
-            });
-        }, { threshold: 0.4 });
-
-        wrappers.forEach(wrapper => loadObserver.observe(wrapper));
-
-        // Click Play
-        wrappers.forEach(wrapper => {
-            const overlay = wrapper.querySelector('.video-overlay');
-            const iframe = wrapper.querySelector('iframe');
-
-            overlay.addEventListener('click', () => {
-                if (!iframe.src) iframe.src = iframe.dataset.src;
-                const player = new Vimeo.Player(iframe);
-                player.play();
-                wrapper.classList.add('playing');
-            });
-        });
-
-        // Autoplay when visible
-        const autoplayObserver = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                const iframe = entry.target.querySelector('iframe');
-                if (!iframe.src) return;
-
-                const player = new Vimeo.Player(iframe);
-
-                if (entry.isIntersecting) {
-                    player.play();
-                    entry.target.classList.add('playing');
-                }   else {
-                    player.pause();
-                    entry.target.classList.remove('playing');
-                }
-            });
-        }, { threshold: 0.6 });
-
-        wrappers.forEach(wrapper => autoplayObserver.observe(wrapper));
-
-    });
-    </script>
-
-    <script>
-    const popup = document.getElementById("contactPopup");
-    const openBtn = document.getElementById("openPopup");
-    const closeBtn = document.querySelector(".popup-close");
-    
-    openBtn.addEventListener("click", e => {
-      e.preventDefault();
-      popup.style.display = "flex";
-    });
-    
-    closeBtn.addEventListener("click", () => {
-      popup.style.display = "none";
-    });
-    
-    window.addEventListener("click", e => {
-      if (e.target === popup) popup.style.display = "none";
-    });
-    </script>
-    
-
-    <div id="contactPopup" class="popup-overlay">
-        <div class="popup-box">
-            <span class="popup-close">&times;</span>
-            <h2>Lass uns sprechen 🚀</h2>
-            <p>Schreib mir kurz worum es geht und ich melde mich persönlich.</p>
-  
-            <form action="mailto:mat@streetwise.studio" method="post" enctype="text/plain">
-                <input type="text" name="Name" placeholder="Dein Name" required>
-                <input type="email" name="Email" placeholder="Deine Email" required>
-                <textarea name="Nachricht" placeholder="Worum geht’s?" required></textarea>
-                <button type="submit" class="cta-button">Nachricht senden</button>
+                <div id="formMessage" class="form-message"></div>
             </form>
         </div>
-    </div>
-  
+    </div>  
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>©2026 Supermedia Web-Support</p>
+        <p>
+            <a href="#">Impressum</a> | <a href="#">Datenschutz</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>

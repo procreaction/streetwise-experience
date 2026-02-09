@@ -1070,18 +1070,27 @@ body {
    ========================================== */
 
 @media (max-width: 768px) {
+
+    html {
+        font-size: 14px;  /* Standard ist 16px */
+    }
+    
     .countdown {
         gap: 1rem;
         flex-wrap: wrap;
     }
 
     .countdown-item {
-        min-width: 80px;
-        padding: 1rem 1.5rem;
+        min-width: 70px;      /* kleiner */
+        padding: 0.8rem 1rem;  /* weniger padding */
     }
 
     .countdown-number {
-        font-size: 2rem;
+        font-size: 1.5rem;  /* kleiner (war 2rem) */
+    }
+
+    .countdown-label {
+        font-size: 0.75rem;  /* kleiner */
     }
 
     .section {

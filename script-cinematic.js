@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ==========================================
-    // SMOOTH SCROLL FOR ALL ANCHOR LINKS
+    // SMOOTH SCROLL FOR ALL ANCHOR LINKS 
     // ==========================================
     
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

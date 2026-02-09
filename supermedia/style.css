@@ -1071,10 +1071,6 @@ body {
 
 @media (max-width: 768px) {
 
-    html {
-        font-size: 14px;  /* Standard ist 16px */
-    }
-    
     .countdown {
         gap: 1rem;
         flex-wrap: wrap;

@@ -496,9 +496,27 @@ body {
    ========================================== */
 
 @media (max-width: 768px) {
+
+    /* Service Cards kleiner */
+    .service-card {
+        padding: 2rem;  /* war 3rem */
+    }
+    
+    .card-icon {
+        font-size: 3rem;  /* war 4rem */
+    }
+    
+    .card-title {
+        font-size: 1.5rem;  /* war 2rem */
+    }
+    
+    .card-description {
+        font-size: 1rem;  /* war 1.1rem */
+    }
+}
     .hero-image {
-        width: 150px;
-        height: 150px;
+        width: 250px;
+        height: 250px;
     }
 
     .services {

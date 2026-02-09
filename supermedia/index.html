@@ -3,24 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>streetwise Supermedia - digital Media Service & Support</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>SUPERMEDIA | streetwise Digital Media Support</title>
+    <link rel="stylesheet" href="style-homepage.css">
 </head>
 <body>
 
-    <section class="section fade-in-up">
-        <h2 class="section-title">Neues Element</h2>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-image-container">
+                <img src="Mat.gif" alt="Mat Branger" class="hero-image">
+            </div>
+            <h1 class="hero-title">
+                <span class="brand">SUPER</span><span class="brand-accent">MEDIA</span>
+            </h1>
+            <p class="hero-subtitle">Digital Media Support für Freizeitschulen, Instruktor:innen und Experten</p>
+            <p class="hero-tagline">Video • Webseiten • Social Ads</p>
+        </div>
+        <div class="scroll-indicator">
+            <span>↓</span>
+        </div>
+    </section>
 
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
-        }, { threshold: 0.1 });
+    <!-- Services Section -->
+    <section class="services">
+        <div class="services-container">
+            
+            <h2 class="services-title">Was ich für dich machen kann</h2>
+            
+            <div class="services-grid">
+                
+                <!-- Video Card -->
+                <a href="https://www.streetwise.studio/video" class="service-card" target="_parent">
+                    <div class="card-icon">🎬</div>
+                    <h3 class="card-title">VIDEO</h3>
+                    <p class="card-description">
+                        Professionelle Video-Produktion, Schnitt & Motion Graphics für dein Business
+                    </p>
+                    <div class="card-features">
+                        <span>Social Media Videos</span>
+                        <span>Werbefilme</span>
+                        <span>Produktvideos</span>
+                    </div>
+                    <div class="card-cta">
+                        Mehr erfahren →
+                    </div>
+                </a>
 
-        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
-    </script>
+                <!-- Webseiten Card -->
+                <a href="https://www.streetwise.studio/webdesign" class="service-card featured" target="_parent">
+                    <div class="featured-badge">Beliebt</div>
+                    <div class="card-icon">🌐</div>
+                    <h3 class="card-title">WEBSEITEN</h3>
+                    <p class="card-description">
+                        Web-Support Abos ab CHF 69/Monat – deine Website wächst mit dir
+                    </p>
+                    <div class="card-features">
+                        <span>Moderne Websites</span>
+                        <span>Laufender Support</span>
+                        <span>Flexibel & günstig</span>
+                    </div>
+                    <div class="card-cta">
+                        Pakete ansehen →
+                    </div>
+                </a>
+
+                <!-- Social Ads Card -->
+                <a href="https://www.streetwise.studio/probewoche" class="service-card" target="_parent">
+                    <div class="card-icon">🚀</div>
+                    <h3 class="card-title">SOCIAL ADS</h3>
+                    <p class="card-description">
+                        Gezielte Werbekampagnen auf Instagram & Facebook für lokale Businesses
+                    </p>
+                    <div class="card-features">
+                        <span>Video Ads</span>
+                        <span>Lead Generation</span>
+                        <span>Performance Tracking</span>
+                    </div>
+                    <div class="card-cta">
+                        Kampagne starten →
+                    </div>
+                </a>
+
+                <!-- Challenge Card (Bonus) 
+                <a href="/challenge-external.html" class="service-card bonus">
+                    <div class="bonus-badge">🎁 KOSTENLOS</div>
+                    <div class="card-icon">🎓</div>
+                    <h3 class="card-title">3 TAGE CHALLENGE</h3>
+                    <p class="card-description">
+                        Lerne wie du 2026 über's Internet Anmeldungen & Kunden gewinnst
+                    </p>
+                    <div class="card-features">
+                        <span>Live-Training</span>
+                        <span>Dein Angebot Online promoten</span>
+                        <span>kostenlose Apps & Tools</span>
+                    </div>
+                    <div class="card-cta challenge-cta">
+                        Jetzt anmelden →
+                    </div>
+                </a> -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="about-title">Hi, ich bin Mat</h2>
+                <p class="about-text">
+                    Seit 2008 bin ich Digital Media Spezialist für Artists, Instructors und Selbständige.
+                </p>
+                <p class="about-text">
+                    Nach meiner Ausbildung zum Multimedia Artist & Designer war ich lange als Video-Freelancer unterwegs. 
+                    Dann habe ich mich in Social Media Ads weitergebildet und helfe jetzt lokalen Businesses, 
+                    über's Internet direkt Anmeldungen und Kunden zu gewinnen.
+                </p>
+                <p class="about-highlight">
+                    Seit 2024 zeige ich meinen Kunden, wie sie begehrenswerte Online-Angebote entwerfen 
+                    und zuverlässig Kunden dafür gewinnen.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2 class="cta-title">Bereit durchzustarten?</h2>
+        <p class="cta-text">Lass uns gemeinsam dein Business online bringen</p>
+        <div class="cta-buttons">
+            <a href="https://www.streetwise.studio/apply" class="cta-button primary" target="_parent">Kontakt aufnehmen</a>
+            <a href="https://www.streetwise.studio/self-promotion-challenge" class="cta-button secondary" target="_parent">Zur kostenlosen Challenge</a>
+        </div>
+    </section>
+
+    <!-- Footer 
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3><span class="brand">SUPER</span><span class="brand-accent">MEDIA</span></h3>
+                <p>Digital Media & Web Support</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Impressum</a>
+                <a href="#">Datenschutz</a>
+                <a href="mailto:mat@streetwise.studio">mat@streetwise.studio</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>©2026 supermedia | Part of streetwise.studio</p>
+        </div>
+    </footer> -->
+
+    <script src="script-homepage.js"></script>
+
 </body>
 </html>
-

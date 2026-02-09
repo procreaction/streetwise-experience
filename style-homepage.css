@@ -495,25 +495,25 @@ body {
    RESPONSIVE
    ========================================== */
 
-@media (max-width: 768px) {
+   @media (max-width: 768px) {
 
-    /* Service Cards kleiner */
+    /* Service Cards kleiner auf Mobile */
     .service-card {
-        padding: 2rem;  /* war 3rem */
+        padding: 2rem;
     }
     
     .card-icon {
-        font-size: 3rem;  /* war 4rem */
+        font-size: 3rem;
     }
     
     .card-title {
-        font-size: 1.5rem;  /* war 2rem */
+        font-size: 1.5rem;
     }
     
     .card-description {
-        font-size: 1rem;  /* war 1.1rem */
+        font-size: 1rem;
     }
-}
+
     .hero-image {
         width: 250px;
         height: 250px;
@@ -523,6 +523,7 @@ body {
         padding: 4rem 1rem;
     }
 
+    /* Das Grid wird nur auf Mobile einspaltig */
     .services-grid {
         grid-template-columns: 1fr;
     }
@@ -557,4 +558,4 @@ body {
     .footer-links {
         align-items: flex-start;
     }
-}
+} /* <--- Diese Klammer schließt jetzt ALLES ab, was nur für kleine Bildschirme gelten soll. */

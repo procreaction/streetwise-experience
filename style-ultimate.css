@@ -1,6 +1,5 @@
 /* ==========================================
-   SUPERMEDIA ULTIMATE - V3 (FULL VERSION)
-   Scroll Reveals + Diagonal Cuts + 3D Tilt
+   SUPERMEDIA ULTIMATE - V3 (REVEAL VERSION)
    ========================================== */
 
    * {
@@ -22,7 +21,7 @@ body {
 }
 
 /* ==========================================
-   REVEAL SECTIONS
+   REVEAL LOGIC
    ========================================== */
 
 .reveal-section {
@@ -38,91 +37,50 @@ body {
 }
 
 /* ==========================================
-   HERO SECTION
+   HERO BLACK (Nur Text)
    ========================================== */
 
-.hero {
+.hero-black {
     height: 100vh;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-}
-
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(10, 10, 10, 0.2) 0%, rgba(10, 10, 10, 0.6) 100%);
-    z-index: 1;
+    background: #0a0a0a; /* Puristisches Schwarz */
+    position: relative;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
     text-align: center;
-    padding: 2.5rem;
-    background: rgba(0, 0, 0, 0.5); /* Verdunkeltes Overlay */
-    backdrop-filter: blur(12px);    /* Verstärkter Glas-Effekt */
-    border: 1px solid rgba(0, 255, 255, 0.15);
-    border-radius: 20px;
-    max-width: 80%;
-    margin: 0 auto;
-    transition: all 0.5s ease;
+    padding: 2rem;
+    z-index: 10;
     transform-style: preserve-3d;
 }
 
-.hero-content:hover {
-    background: rgba(0, 0, 0, 0.7);
-    border-color: rgba(0, 255, 255, 0.4);
-}
-
 .hero-title {
-    font-size: clamp(2rem, 5vw, 3.5rem); /* Edler & kleiner */
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 800;
     margin-bottom: 0.5rem;
     letter-spacing: -1px;
 }
 
-.brand { color: #ffffff; }
 .brand-accent {
     color: #00ffff;
-    text-shadow: 0 0 40px rgba(0, 255, 255, 0.5);
+    text-shadow: 0 0 50px rgba(0, 255, 255, 0.3);
 }
 
 .hero-subtitle {
-    font-size: clamp(0.9rem, 1.5vw, 1.1rem); /* Kleiner & edler */
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     color: #00ffff;
     margin-bottom: 1rem;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .hero-claim {
-    font-size: clamp(1.1rem, 2.5vw, 1.8rem); /* Schlanker */
-    color: #ffffff;
-    font-weight: 400;
-    margin-top: 1rem;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    font-weight: 300;
+    color: #e0e0e0;
 }
 
 .scroll-indicator {
@@ -132,9 +90,7 @@ body {
     transform: translateX(-50%);
     color: #00ffff;
     font-size: 2rem;
-    z-index: 2;
-    cursor: pointer;
-    animation: bounce 2s ease-in-out infinite;
+    animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
@@ -143,18 +99,50 @@ body {
 }
 
 /* ==========================================
-   PROBLEM SECTION
+   GIF REVEAL SECTION (Das Bild unter dem Hero)
+   ========================================== */
+
+.hero-reveal-visual {
+    width: 100%;
+    height: 80vh; /* Etwas kleiner als Fullscreen für edlen Look */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a0a0a;
+    padding: 2rem;
+}
+
+.reveal-image-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 60px rgba(0, 0, 0, 1);
+}
+
+.reveal-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================
+   PROBLEM SECTION (Astronaut Update)
    ========================================== */
 
 .problem-section {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr; /* Astronaut bekommt mehr Platz */    
+    grid-template-columns: 1.2fr 0.8fr; /* Fokus auf Bild */
     align-items: center;
     gap: 4rem;
     padding: 6rem 4rem;
     background: #0a0a0a;
 }
+
+
 
 .problem-visual {
     position: relative;
@@ -190,6 +178,7 @@ body {
     flex-direction: column;
     gap: 2rem;
 }
+
 
 .problem-item {
     display: flex;
@@ -328,6 +317,7 @@ body {
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     transform-style: preserve-3d;
+    transition: 0.4s;
 }
 
 .service-card:hover {
@@ -915,6 +905,8 @@ body {
     .footer-links {
         align-items: flex-start;
     }
+
+    .hero-reveal-visual { height: 50vh; }
 }
 
 @media (max-width: 768px) {

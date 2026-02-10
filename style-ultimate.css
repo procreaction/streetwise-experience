@@ -1,9 +1,9 @@
 /* ==========================================
-   SUPERMEDIA ULTIMATE - V3
+   SUPERMEDIA ULTIMATE - V3 (FULL VERSION)
    Scroll Reveals + Diagonal Cuts + 3D Tilt
    ========================================== */
 
-* {
+   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,7 +22,7 @@ body {
 }
 
 /* ==========================================
-   REVEAL SECTIONS (Spaceship.com Style)
+   REVEAL SECTIONS
    ========================================== */
 
 .reveal-section {
@@ -81,9 +81,9 @@ body {
     z-index: 2;
     text-align: center;
     padding: 2.5rem;
-    background: rgba(0, 0, 0, 0.4); /* Verdunkeltes Overlay */
-    backdrop-filter: blur(8px);    /* Glas-Effekt */
-    border: 1px solid rgba(0, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.5); /* Verdunkeltes Overlay */
+    backdrop-filter: blur(12px);    /* Verstärkter Glas-Effekt */
+    border: 1px solid rgba(0, 255, 255, 0.15);
     border-radius: 20px;
     max-width: 80%;
     margin: 0 auto;
@@ -92,50 +92,37 @@ body {
 }
 
 .hero-content:hover {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     border-color: rgba(0, 255, 255, 0.4);
 }
 
 .hero-title {
-    font-size: clamp(2rem, 5vw, 4rem); /* Deutlich kleiner & edler */
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Edler & kleiner */
     font-weight: 800;
     margin-bottom: 0.5rem;
     letter-spacing: -1px;
 }
 
-.hero-subtitle {
-    font-size: clamp(1rem, 1.5vw, 1.2rem); /* Dezent */
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #999;
-}
-
-.hero-claim {
-    font-size: clamp(1.2rem, 2vw, 1.8rem); /* Schlanker */
-    margin-top: 1rem;
-}
-
-.brand {
-    color: #ffffff;
-}
-
+.brand { color: #ffffff; }
 .brand-accent {
     color: #00ffff;
-    text-shadow: 0 0 60px rgba(0, 255, 255, 0.8);
+    text-shadow: 0 0 40px rgba(0, 255, 255, 0.5);
 }
 
 .hero-subtitle {
-    font-size: clamp(1.3rem, 3vw, 2rem);
-    color: #e0e0e0;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem); /* Kleiner & edler */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #00ffff;
     margin-bottom: 1rem;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    opacity: 0.9;
 }
 
 .hero-claim {
-    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
-    color: #00ffff;
-    font-weight: 600;
-    text-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+    font-size: clamp(1.1rem, 2.5vw, 1.8rem); /* Schlanker */
+    color: #ffffff;
+    font-weight: 400;
+    margin-top: 1rem;
 }
 
 .scroll-indicator {
@@ -208,9 +195,10 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 1.5rem;
+    padding: 1.5rem;
     background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);    
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-left: none; /* Blauer Rand weg */
+    border-left: none; 
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -222,12 +210,12 @@ body {
     left: 0; top: 0; bottom: 0;
     width: 2px;
     background: #00ffff;
-    box-shadow: 0 0 15px #00ffff; /* Subtiler Glow statt Balken */
+    box-shadow: 0 0 15px #00ffff; 
 }
 
-/* Auch hier 3D-Tilt erlauben */
 .problem-item:hover {
     border-color: rgba(0, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .problem-icon {
@@ -306,7 +294,7 @@ body {
 }
 
 /* ==========================================
-   SERVICES SECTION (3D Tilt Cards)
+   SERVICES SECTION
    ========================================== */
 
 .services-section {
@@ -437,9 +425,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.card-cta:hover {
-    transform: translateX(5px);
-}
+.card-cta:hover { transform: translateX(5px); }
 
 .card-cta.highlight {
     background: linear-gradient(135deg, #00ffff 0%, #00cccc 100%);
@@ -481,7 +467,7 @@ body {
     position: absolute;
     top: -20px;
     left: 50%;
-    transform: translateX(-50%) translateZ(20px); /* Falls 3D aktiv ist */  
+    transform: translateX(-50%);  
     width: 60px;
     height: 60px;
     background: linear-gradient(135deg, #00ffff 0%, #00cccc 100%);
@@ -493,12 +479,12 @@ body {
     font-weight: 900;
     color: #0a0a0a;
     box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
-    z-index: 10; /* Höher als das Bild */
+    z-index: 20 !important; /* Fix: Höher als das Visual */
 }
 
 .how-visual {
     position: relative;
-    z-index: 1; /* Niedriger als Nummer */
+    z-index: 1; 
     width: 100%;
     height: 250px;
     overflow: hidden;
@@ -580,10 +566,7 @@ body {
     margin-bottom: 0.3rem;
 }
 
-.testimonial-author span {
-    color: #999;
-    font-size: 1rem;
-}
+.testimonial-author span { color: #999; font-size: 1rem; }
 
 /* ==========================================
    WHY SECTION
@@ -610,10 +593,7 @@ body {
     object-fit: cover;
 }
 
-.why-content {
-    padding: 6rem;
-    background: #0a0a0a;
-}
+.why-content { padding: 6rem; background: #0a0a0a; }
 
 .why-content h2 {
     font-size: clamp(2.5rem, 5vw, 4rem);
@@ -681,10 +661,7 @@ body {
     color: #00ffff;
 }
 
-.basel-content p {
-    font-size: 1.3rem;
-    color: #e0e0e0;
-}
+.basel-content p { font-size: 1.3rem; color: #e0e0e0; }
 
 /* ==========================================
    CHALLENGE SECTION
@@ -695,10 +672,7 @@ body {
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
 }
 
-.challenge-header {
-    text-align: center;
-    margin-bottom: 5rem;
-}
+.challenge-header { text-align: center; margin-bottom: 5rem; }
 
 .challenge-badge {
     display: inline-block;
@@ -766,21 +740,11 @@ body {
     letter-spacing: 2px;
 }
 
-.challenge-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #ffffff;
-}
+.challenge-card h3 { font-size: 1.8rem; margin-bottom: 1rem; color: #ffffff; }
 
-.challenge-card p {
-    color: #999;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
+.challenge-card p { color: #999; font-size: 1.1rem; line-height: 1.6; }
 
-.challenge-cta-wrapper {
-    text-align: center;
-}
+.challenge-cta-wrapper { text-align: center; }
 
 .challenge-cta {
     display: inline-block;
@@ -800,11 +764,7 @@ body {
     box-shadow: 0 15px 60px rgba(0, 255, 255, 0.6);
 }
 
-.challenge-note {
-    margin-top: 2rem;
-    color: #999;
-    font-size: 1.1rem;
-}
+.challenge-note { margin-top: 2rem; color: #999; font-size: 1.1rem; }
 
 /* ==========================================
    FINAL CTA
@@ -818,21 +778,11 @@ body {
     background: #0a0a0a;
 }
 
-.final-visual {
-    height: 100vh;
-    overflow: hidden;
-}
+.final-visual { height: 100vh; overflow: hidden; }
 
-.final-visual img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+.final-visual img { width: 100%; height: 100%; object-fit: cover; }
 
-.final-content {
-    padding: 6rem;
-    text-align: center;
-}
+.final-content { padding: 6rem; text-align: center; }
 
 .final-content h2 {
     font-size: clamp(2.5rem, 5vw, 4rem);
@@ -840,11 +790,7 @@ body {
     color: #00ffff;
 }
 
-.final-content p {
-    font-size: 1.5rem;
-    color: #e0e0e0;
-    margin-bottom: 3rem;
-}
+.final-content p { font-size: 1.5rem; color: #e0e0e0; margin-bottom: 3rem; }
 
 .final-buttons {
     display: flex;
@@ -905,20 +851,9 @@ body {
     margin-bottom: 2rem;
 }
 
-.footer-brand h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.footer-brand p {
-    color: #999;
-    margin-bottom: 0.5rem;
-}
-
-.footer-brand a {
-    color: #00ffff;
-    text-decoration: none;
-}
+.footer-brand h3 { font-size: 2rem; margin-bottom: 1rem; }
+.footer-brand p { color: #999; margin-bottom: 0.5rem; }
+.footer-brand a { color: #00ffff; text-decoration: none; }
 
 .footer-links {
     display: flex;
@@ -933,9 +868,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.footer-links a:hover {
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-}
+.footer-links a:hover { text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); }
 
 .footer-bottom {
     text-align: center;
@@ -950,15 +883,16 @@ body {
    ========================================== */
 
 @media (max-width: 1024px) {
+    /* Fix für Mobile: Sichtbarkeit erzwingen */
+    .service-card, .reveal-section, .how-step {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
     .problem-section,
     .why-section,
     .final-section {
         grid-template-columns: 1fr;
-    }
-
-    .service-card, .reveal-section {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
     }
 
     .problem-visual,

@@ -42,7 +42,9 @@ body {
 
 .hero-black {
     height: 100vh;
+    min-height: 100svh; /* Nutzt den exakten Handy-Screen */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: #0a0a0a; /* Puristisches Schwarz */
@@ -102,14 +104,18 @@ body {
    GIF REVEAL SECTION (Das Bild unter dem Hero)
    ========================================== */
 
+/* GIF REVEAL SEKTION */
 .hero-reveal-visual {
     width: 100%;
-    height: 80vh; /* Etwas kleiner als Fullscreen für edlen Look */
+    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #0a0a0a;
     padding: 2rem;
+    position: relative;
+    z-index: 5;
 }
 
 .reveal-image-container {
@@ -910,6 +916,14 @@ body {
 }
 
 @media (max-width: 768px) {
+
+    .hero-black, .hero-reveal-visual {
+        height: 100svh;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
     .services-grid,
     .how-grid,
     .testimonials-grid,

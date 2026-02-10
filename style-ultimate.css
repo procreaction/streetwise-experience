@@ -80,15 +80,39 @@ body {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 2rem;
+    padding: 2.5rem;
+    background: rgba(0, 0, 0, 0.4); /* Verdunkeltes Overlay */
+    backdrop-filter: blur(8px);    /* Glas-Effekt */
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    border-radius: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.hero-content:hover {
+    background: rgba(0, 0, 0, 0.6);
+    border-color: rgba(0, 255, 255, 0.4);
 }
 
 .hero-title {
-    font-size: clamp(4rem, 10vw, 8rem);
-    font-weight: 900;
-    margin-bottom: 1.5rem;
-    letter-spacing: -3px;
-    text-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    font-size: clamp(2rem, 5vw, 4rem); /* Deutlich kleiner & edler */
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 1.5vw, 1.2rem); /* Dezent */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #999;
+}
+
+.hero-claim {
+    font-size: clamp(1.2rem, 2vw, 1.8rem); /* Schlanker */
+    margin-top: 1rem;
 }
 
 .brand {
@@ -138,7 +162,7 @@ body {
 .problem-section {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 0.8fr; /* Astronaut bekommt mehr Platz */    
     align-items: center;
     gap: 4rem;
     padding: 6rem 4rem;
@@ -184,10 +208,26 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 1.5rem;
-    background: rgba(255, 255, 255, 0.02);
-    padding: 1.5rem;
-    border-radius: 15px;
-    border-left: 3px solid #00ffff;
+    background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);    
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: none; /* Blauer Rand weg */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.problem-item::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 2px;
+    background: #00ffff;
+    box-shadow: 0 0 15px #00ffff; /* Subtiler Glow statt Balken */
+}
+
+/* Auch hier 3D-Tilt erlauben */
+.problem-item:hover {
+    border-color: rgba(0, 255, 255, 0.3);
 }
 
 .problem-icon {
@@ -434,13 +474,14 @@ body {
 .how-step {
     text-align: center;
     position: relative;
+    z-index: 1;
 }
 
 .how-number {
     position: absolute;
     top: -20px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateZ(20px); /* Falls 3D aktiv ist */  
     width: 60px;
     height: 60px;
     background: linear-gradient(135deg, #00ffff 0%, #00cccc 100%);
@@ -452,9 +493,12 @@ body {
     font-weight: 900;
     color: #0a0a0a;
     box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+    z-index: 10; /* Höher als das Bild */
 }
 
 .how-visual {
+    position: relative;
+    z-index: 1; /* Niedriger als Nummer */
     width: 100%;
     height: 250px;
     overflow: hidden;
@@ -910,6 +954,11 @@ body {
     .why-section,
     .final-section {
         grid-template-columns: 1fr;
+    }
+
+    .service-card, .reveal-section {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
     }
 
     .problem-visual,

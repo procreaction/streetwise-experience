@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // SCROLL REVEAL ANIMATIONS (Spaceship.com Style)
     // ==========================================
     
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+    heroContent.setAttribute('data-tilt', ''); // Aktiviert den 3D-Effekt automatisch
+    }
+
     const revealOptions = {
         threshold: 0.15,
         rootMargin: '0px 0px -100px 0px'

@@ -107,8 +107,8 @@
             <div class="testimonial-result">neue Webseite erstellt</div>
             <div class="video-wrapper">
                 <img 
-                    src="https://d1yei2z3i6k35z.cloudfront.net/2913691/65e0af2085985_Petra.JPG" 
-                    alt="Feb2nd Modelabel Webseite" 
+                    src="https://d1yei2z3i6k35z.cloudfront.net/2913691/69ab4ccb6c80f_Sternenwissen-Vanessa-Gabor-06.png" 
+                    alt="Sternenwissen Webseite" 
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
                 >
             </div>
@@ -120,5 +120,17 @@
         </div>
 
     </div>
+    <script>
+        function updateParentHeight() {
+          // Ermittelt die Höhe des gesamten Inhalts innerhalb des iframes
+          const height = document.body.offsetHeight;
+          // Sendet die Höhe an die Hauptseite (systeme.io)
+          window.parent.postMessage({ type: 'resize', height: height }, '*');
+        }
+        
+        // Höhe beim Laden und bei Größenänderung senden
+        window.addEventListener('load', updateParentHeight);
+        window.addEventListener('resize', updateParentHeight);
+    </script>
 </body>
 </html>

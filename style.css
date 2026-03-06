@@ -198,8 +198,8 @@ body {
     padding: 6rem 2rem;
     max-width: 1400px;
     margin: 0 auto;
-    opacity: 0;
-    transform: translateY(50px);
+    opacity: 1 !important;
+    transform: none !important;
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 

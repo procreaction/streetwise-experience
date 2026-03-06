@@ -38,5 +38,14 @@
         </div>
     </div>
 
+    <script>
+        function updateHeight() {
+            const height = document.body.offsetHeight;
+            window.parent.postMessage({ frameHeight: height }, '*');
+        }
+        window.addEventListener('load', updateHeight);
+        window.addEventListener('resize', updateHeight);
+    </script>
+
 </body>
 </html>
